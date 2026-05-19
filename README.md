@@ -1,25 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+# 🎯 Number Guessing Game
+A simple yet logic-building CLI game where the user competes against the computer to guess a hidden number.
 
-int main() {
-    int number, guess, nguesses = 1;
-    srand(time(0));
-    number = rand() % 100 + 1; // Generates a random number between 1 and 100
+## 📝 Description
+The system generates a random number between 1 and 100. The player must guess the number. With every wrong guess, the program provides a hint (Higher or Lower) until the correct number is found.
 
-    printf("Guess the number between 1 to 100\n");
+## 🛠️ Concepts Covered
+- **Random Number Generation**: Using `srand()` and `time()`.
+- **Loops**: Implementation of `do-while` logic.
+- **Conditionals**: Nested `if-else` for player feedback.
+- **Input Handling**: Standard I/O using `stdio.h`.
 
-    do {
-        scanf("%d", &guess);
-        if (guess > number) {
-            printf("Lower number please!\n");
-        } else if (guess < number) {
-            printf("Higher number please!\n");
-        } else {
-            printf("You guessed it in %d attempts!\n", nguesses);
-        }
-        nguesses++;
-    } while (guess != number);
-
-    return 0;
-}
+## 🚀 How to Run
+1. Clone the repository.
+2. Compile using GCC: `gcc guessing_game.c -o guessing_game`
+3. Run the executable: `./guessing_game`
